@@ -1,6 +1,7 @@
 package main
 
 // implement a RESTful API in Golang
+// cool
 
 import (
 	"log"

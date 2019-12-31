@@ -1,6 +1,11 @@
 package main
 
-import "github.com/gorilla/mux"
+import (
+	"log"
+	"net/http"
+
+	"github.com/gorilla/mux"
+)
 
 func main() {
 
@@ -14,5 +19,7 @@ func main() {
 	r.HandleFunc("/api/books", createBooks).Methods("POST")
 	r.HandleFunc("/api/books/{id}", updateBooks).Methods("PUT")
 	r.HandleFunc("/api/books/{id}", deleteBook).Methods("DELETE")
+
+	log.Fatal(http.ListenAndServe(":8000", r))
 
 }

@@ -7,6 +7,8 @@ import (
 	"github.com/gorilla/mux"
 )
 
+// Book Struct (model)
+
 func main() {
 
 	// init router
